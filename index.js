@@ -17,7 +17,10 @@ Do the following:
 
    HINT: no function required
 */
-
+const votingAge = 33
+  if (votingAge >= 18) {
+  console.log(true);
+  }
 
 
 /*
@@ -31,9 +34,14 @@ Do the following:
    HINT: no function required
 */
 
+const firstName = Robin
+const lastName = Brooks
 
-
-
+if(firstName === Sam && lastName === Brooks) {
+    console.log ('Wrong Person') 
+   } else if (firstName === Robin && lastName === Brooks) {
+      console.log ('Hello Robin Brooks')
+  }
 
 /*
 Task 1c - Convert Strings to Numbers
@@ -46,8 +54,8 @@ Do the following:
    HINT: look up the Number method
 */
 
-
-
+var dateText = "1999";
+var dateNum = parseInt(dateText)
 
 /*
 Task 1d - Multiply
@@ -58,8 +66,16 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+var x = 2;
+var y = 3;
+var z = x * y;
+
+console.log(z)
+
+w
+
+function multiply(x, y ){
+    return x * y;
   }
 
 
@@ -154,6 +170,18 @@ Use the game function below to do the following:
 
 function game(user, computer){
     /*add your code here*/
+}
+
+var computers = Math.random
+function game(user, computer){
+  if(compute >=0 && computer < 0.333) {
+    else if (computer >= 0.333 && computer < 0.666 && user ='roc'){
+      return ('paper');
+      else if computer >= 0.666 && computer <=1){
+        return(scissors');
+      }
+    }
+  }
 }
   
   
