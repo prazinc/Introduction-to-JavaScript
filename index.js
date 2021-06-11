@@ -1,6 +1,6 @@
 /*🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️ Task 1: Warm-up! 🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️*/
 
-/*MAKE SURE TO RETURN ALL OF THE ANSWERS INSIDE OF A FUNCTION ON THESE TASKS, IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
+/*MMAKE SURE TO RETURN ALL OF THE ANSWERS INSIDE OF A FUNCTION ON THESE TASKS, IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
 
 /*
 When doing these tasks, we recommend using console.log to test the output of your code to make sure it works correctly.
@@ -16,11 +16,16 @@ Do the following:
    2. Console log true if age is 18 or higher
 
    HINT: no function required
+
 */
-const votingAge = 33
-  if (votingAge >= 18) {
-  console.log(true);
-  }
+
+const votingAge = 18;
+
+if(votingAge >= 18){
+  console.log('task 1a', true);
+} else {
+      console.log(false);
+    }
 
 
 /*
@@ -34,14 +39,14 @@ Do the following:
    HINT: no function required
 */
 
-const firstName = Robin
-const lastName = Brooks
+let dog = 'Ada';
+let behavior = 'bad';
 
-if(firstName === Sam && lastName === Brooks) {
-    console.log ('Wrong Person') 
-   } else if (firstName === Robin && lastName === Brooks) {
-      console.log ('Hello Robin Brooks')
-  }
+if(behavior === 'bad'){
+  dog = 'Noa';
+}
+
+console.log('task 1 b', dog)
 
 /*
 Task 1c - Convert Strings to Numbers
@@ -54,8 +59,11 @@ Do the following:
    HINT: look up the Number method
 */
 
-var dateText = "1999";
-var dateNum = parseInt(dateText)
+const party = '1999';
+
+console.log('task1 c', Number(party));
+
+
 
 /*
 Task 1d - Multiply
@@ -66,18 +74,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-var x = 2;
-var y = 3;
-var z = x * y;
-
-console.log(z)
-
-w
-
-function multiply(x, y ){
-    return x * y;
+function multiply(a, b){
+    return a * b;
   }
 
+console.log('task 1 d', multiply(9, 19));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -90,10 +91,10 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+    return age * 7;
 }
-
+ console.log('task 2', dogYears(51));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -124,27 +125,23 @@ Use the hungryDog function and feeding requirements below to do the following:
 */  
 
 function hungryDog(weight, age){
-    if(age >= 1 && weight <= 5){
-      return weight *0.05;
-    }else if(age >=1 && weight >=6 && weight <= 10){
+    if(age >=1 && weight <= 5){
+      return weight * 0.05;
+    }else if(age >=1 && weight >= 6 && weight <= 10){
       return weight * 0.04;
-    }else if(age >= 1 && weight >= 11 && weight <= 15){
+    }else if (age >=1 && weight >=11 && weight <= 15){
       return weight * 0.03;
-    }else if(age >= 1 && weight >15){
+    }else if (age >= 1 && weight >=15){
       return weight * 0.02;
-    }else if(age < 1 && age >= 0.583){
+    }else if (age < 1 && age >=0.583 ){
       return weight * 0.04;
-    }else if(age < 0.583 && age >= 0.333){
-      returnweight * 0.05;
-    }else if(age < 0.333){
-      return weight * 0.10;
-    }else{
-      return 'please try again'
-    }
+    }else if (age < 0.583 && age > 0.333){
+      return weight * 0.05;
+    }else if (age < 0.333 && age > 0.1666){
+      return weight * 0.1;
+    }else 'please try again';
   }
-
-  console.log('task 3' , hungryDog(15, 1));
-
+console.log('task 3', hungryDog(15, 1));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -167,22 +164,30 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
+let computer = Math.random();
+if(computer <= 0.34){
+  computer = 'rock';
+} else if(computer <= 0.67){
+  computer= 'paper';
+}else if(computer > 0.67){
+  computer = 'scissors';
+}  
 
 function game(user, computer){
-    /*add your code here*/
-}
-
-var computers = Math.random
-function game(user, computer){
-  if(compute >=0 && computer < 0.333) {
-    else if (computer >= 0.333 && computer < 0.666 && user ='roc'){
-      return ('paper');
-      else if computer >= 0.666 && computer <=1){
-        return(scissors');
-      }
+    if(user === computer){
+      return 'its a tie';
+    }else if(user === 'rock' && computer === 'scissors'){
+      return 'you win!';
+    }else if( user === 'paper' && computer === 'rock'){
+      return 'you win!';
+    }else if(user = 'scissors' && computer === 'paper'){
+      return 'you win'
+    }else{
+      return 'you lose';
     }
-  }
 }
+
+console.log('task 4',  game('paper', computer));
   
   
 
@@ -197,11 +202,11 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(km){
+    return km * 0.621371
   }
 
-
+console.log('task 5 a', miles(2));
 
 //Task 5b - Feet to CM
 /*
@@ -211,9 +216,11 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(cm){
+    return cm / 30.48
   }
+
+  console.log('task 5 b', feet(160));
  
 
 
@@ -227,10 +234,14 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(number){
+        for(let i = number; i > 0; i --){
+          return `${i} bottles of soda on the wall, ${i} take one dwon pass it around ${i -1} bottles of soda on the wall`;
+        }
   }
 
+  console.log('task 6', annoyingSong(8));
+  console.log('task 6', annoyingSong(7));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -247,12 +258,21 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade(number){
+  if(number >= 90){
+    return 'you got an A';
+  }else if(number < 90 && number >= 80){
+    return 'you got a B';
+  }else if(number < 80 && number >= 70){
+    return 'you got a C';
+  }else if(number < 70 && number >= 60){
+    return 'you got a D';
+  }else if(number < 60){
+    return 'you got an F';
   }
-  
-  
+}
 
+  console.log('task 7',  grade(65));
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
 //Vowel Counter - How many vowels are there?
